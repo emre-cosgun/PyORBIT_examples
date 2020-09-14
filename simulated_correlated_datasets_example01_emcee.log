@@ -1,0 +1,221 @@
+
+PyORBIT v8.x
+
+Python version in use:
+3.7.3 (default, Mar 27 2019, 16:54:48) 
+[Clang 4.0.1 (tags/RELEASE_401/final)]
+
+reloaded_optimize:  False
+reloaded_pyde:  False
+reloaded_emcee_multirun:  False
+reloaded_emcee:  False
+Opening:  RVdata
+Opening:  BISdata
+Adding common model of planet:  b
+Using orbital model:  circular
+Using orbital parametrization:  Eastman2013_Tcent
+Using Central Time of Transit instead of phase
+
+
+Correlation model
+Reference dataset:   RVdata
+Associated dataset:  BISdata
+Cross-match between datasets: 200 out of 200 
+
+====================================================================================================
+     Boundaries of the sampler variables     
+====================================================================================================
+
+----- dataset:  RVdata
+jitter_0       3  ([  0.050000, 500.000000])
+offset_0       4  ([-1076.474680, 1073.528020])
+
+----------  RVdata      ----- model:  correlation
+c1             5  ([-1000000000.000000, 1000000000.000000])
+
+----------  RVdata      ----- model:  radial_velocities_b
+
+----- dataset:  BISdata
+
+----- common model:  b
+K              0  ([  4.321928,   4.906891])
+P              1  ([  2.126907,   2.253324])
+Tc             2  ([ -0.100000,   0.100000])
+
+----- common model:  star_parameters
+
+
+emcee version:  3.0.2
+
+Include priors:  True
+
+Reference Time Tref:  0.0
+
+Dimensions =  6
+Nwalkers =  48
+
+Using threading pool: True
+
+*************************************************************
+
+PyDE running
+Boundaries redefined after PyDE output
+PyDE completed
+
+====================================================================================================
+     Starting point of the sample/optimization routines    
+====================================================================================================
+
+----- dataset:  RVdata
+jitter_0       3      0.062611 ([  0.050000, 500.000000])
+offset_0       4     -0.443218 ([-1076.474680, 1073.528020])
+
+----------  RVdata      ----- model:  correlation
+c1             5      0.331755 ([-1000000000.000000, 1000000000.000000])
+
+----------  RVdata      ----- model:  radial_velocities_b
+
+----- dataset:  BISdata
+
+----- common model:  b
+K              0      4.649296 ([  4.321928,   4.906891])
+P              1      2.191455 ([  2.126907,   2.253324])
+Tc             2     -0.007265 ([ -0.100000,   0.100000])
+
+----- common model:  star_parameters
+
+====================================================================================================
+     Starting point projected onto the physical space     
+====================================================================================================
+
+----- dataset:  RVdata
+jitter_0            0.062611 
+offset_0           -0.443218 
+
+
+----------  RVdata      ----- model:  correlation
+x_zero           -200.000000 
+c1                  0.331755 
+
+----------  RVdata      ----- model:  radial_velocities_b
+
+----- dataset:  BISdata
+
+
+----- common model:  b
+K                  25.094440 
+o                   1.570796 
+P                   4.567659 
+Tc                 -0.007265 
+e                   0.000000 
+
+----- common model:  star_parameters
+
+====================================================================================================
+     Derived parameters obtained from starting point     
+====================================================================================================
+
+----- common model:  b
+Inclination fixed to 90 deg!
+a                  11.469032 
+M                   0.000193 
+M_Mj                0.202146 
+M_Me               64.260915 
+f                   1.580789 
+
+
+====================================================================================================
+     Statistics on the log-likelihood     
+====================================================================================================
+
+ LN probability:  -623.229868 
+
+====================================================================================================
+     ------------------------------------------------------------------------------------------     
+====================================================================================================
+
+
+
+Running emcee
+
+ Computing the autocorrelation time of the chains
+ Reference thinning used in the analysis: 1
+
+          sample variable      ACF        ACF * nthin
+          RVdata_jitter_0      85.436      85.4
+          RVdata_offset_0      64.022      64.0
+          RVdata_correlation_c1 70.032      70.0
+          b_K                  70.173      70.2
+          b_P                  71.758      71.8
+          b_Tc                 69.293      69.3
+
+====================================================================================================
+     Statistics on the posterior of the sampler variables     
+====================================================================================================
+
+----- dataset:  RVdata
+jitter_0       3      0.634876      -0.414407      0.612380 (15-84 p) ([ 0.050000, 500.000000])
+offset_0       4     -0.450119      -0.352968      0.365634 (15-84 p) ([-1076.474680, 1073.528020])
+
+----------  RVdata      ----- model:  correlation
+c1             5      0.331676      -0.003431      0.003363 (15-84 p) ([-1000000000.000000, 1000000000.000000])
+
+----------  RVdata      ----- model:  radial_velocities_b
+
+----- dataset:  BISdata
+
+----- common model:  b
+K              0      4.648445      -0.029838      0.029084 (15-84 p) ([ 4.321928,  4.906891])
+P              1      2.191455      -0.000356      0.000362 (15-84 p) ([ 2.126907,  2.253324])
+Tc             2     -0.007255      -0.029050      0.028326 (15-84 p) ([-0.100000,  0.100000])
+
+----- common model:  star_parameters
+
+====================================================================================================
+     Statistics on the physical parameters obtained from the posteriors samples     
+====================================================================================================
+
+----- dataset:  RVdata
+jitter_0            0.634876         -0.414407         0.612380 (15-84 p)
+offset_0           -0.450119         -0.352968         0.365634 (15-84 p)
+
+
+----------  RVdata      ----- model:  correlation
+x_zero           -200.000000 
+c1                  0.331676         -0.003431         0.003363 (15-84 p)
+
+----------  RVdata      ----- model:  radial_velocities_b
+
+----- dataset:  BISdata
+
+
+----- common model:  b
+K                  25.079651         -0.513369         0.510716 (15-84 p)
+o                   1.570796 
+P                   4.567659         -0.001129         0.001148 (15-84 p)
+Tc                 -0.007255         -0.029050         0.028326 (15-84 p)
+e                   0.000000 
+
+----- common model:  star_parameters
+
+====================================================================================================
+     Statistics on the derived parameters obtained from the posteriors samples     
+====================================================================================================
+
+----- common model:  b
+Inclination fixed to 90 deg!
+Computing exact mass of the planet (average approximate mass larger than 30.0 Me)
+a                  11.579014         -0.238684         0.248377 (15-84 p)
+M                   0.000195         -0.000005         0.000005 (15-84 p)
+M_Mj                0.204692         -0.004979         0.005028 (15-84 p)
+M_Me               65.070316         -1.582881         1.598503 (15-84 p)
+f                   1.580775         -0.038966         0.039953 (15-84 p)
+
+
+====================================================================================================
+     ------------------------------------------------------------------------------------------     
+====================================================================================================
+
+
+
+emcee completed
